@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Bigger Funding — Capital for Commercial Operators</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F1E3D;
+  --navy-2:#11286B;
+  --navy-3:#1A3478;
+  --gold:#C9A961;
+  --gold-bright:#E0B340;
+  --gold-dark:#9C7B22;
+  --gold-tint:#F4ECD6;
+  --cream:#F7F4EC;
+  --cream-2:#EFE9D9;
+  --ink:#0A1227;
+  --ink-2:#1F2A44;
+  --gray:#5A5F6A;
+  --gray-2:#A0A4AE;
+  --line:rgba(201,169,97,0.25);
+  --line-strong:rgba(201,169,97,0.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--cream);color:var(--ink);font-family:'Geist',system-ui,sans-serif;font-feature-settings:'ss01','cv11';-webkit-font-smoothing:antialiased;line-height:1.5}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:0}
+
+/* ---------- TYPOGRAPHY ---------- */
+.display{font-family:'Fraunces',serif;font-variation-settings:"opsz" 144,"SOFT" 50,"WONK" 0;font-weight:400;line-height:0.95;letter-spacing:-0.02em}
+.display em{font-style:italic;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;color:var(--gold-dark)}
+.eyebrow{font-family:'Geist',sans-serif;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;font-weight:500;color:var(--gold-dark)}
+.eyebrow-light{color:var(--gold)}
+.sect-num{font-family:'Fraunces',serif;font-style:italic;font-size:13px;letter-spacing:0.05em;color:var(--gold-dark)}
+
+/* ---------- LAYOUT ---------- */
+.wrap{max-width:1320px;margin:0 auto;padding:0 32px}
+section{padding:120px 0;position:relative}
+.divider{height:1px;background:var(--line);margin:0}
+.divider-gold{height:1px;background:linear-gradient(90deg,transparent 0%,var(--gold) 20%,var(--gold) 80%,transparent 100%);margin:0}
+
+/* ---------- NAV ---------- */
+.nav{position:sticky;top:0;z-index:100;background:rgba(15,30,61,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,169,97,0.15)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1320px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;color:var(--cream);font-family:'Fraunces',serif;font-weight:500;font-size:22px;letter-spacing:-0.01em}
+.logo-mark{width:32px;height:32px;background:var(--gold);border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:700;font-size:14px;font-family:'Geist',sans-serif}
+.logo small{color:var(--gold);font-family:'Geist',sans-serif;font-size:10px;letter-spacing:0.2em;font-weight:500;text-transform:uppercase;margin-left:4px}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{color:rgba(247,244,236,0.75);font-size:14px;font-weight:400;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--navy);padding:10px 20px;border-radius:2px;font-weight:500;font-size:13px;letter-spacing:0.02em;transition:background 0.2s}
+.nav-cta:hover{background:var(--gold-bright);color:var(--navy)}
+
+/* ---------- HERO ---------- */
+.hero{background:var(--navy);color:var(--cream);padding:100px 0 120px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse at 80% 20%, rgba(201,169,97,0.15) 0%, transparent 50%),
+  radial-gradient(ellipse at 10% 80%, rgba(26,52,120,0.6) 0%, transparent 50%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,169,97,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,97,0.04) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%)}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.6fr 1fr;gap:80px;align-items:end}
+.hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:40px}
+.hero-eyebrow::before{content:"";width:32px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(56px,7.5vw,120px);color:var(--cream);margin-bottom:32px}
+.hero h1 .small{display:block;font-size:0.55em;color:var(--gold);font-style:italic;margin-top:8px}
+.hero-lede{font-size:19px;line-height:1.5;color:rgba(247,244,236,0.78);max-width:540px;margin-bottom:48px;font-weight:300}
+.hero-cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;font-size:14px;font-weight:500;letter-spacing:0.02em;border-radius:2px;transition:all 0.2s}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold-bright)}
+.btn-ghost{color:var(--cream);border:1px solid rgba(201,169,97,0.4)}
+.btn-ghost:hover{border-color:var(--gold);background:rgba(201,169,97,0.08)}
+.btn .arrow{transition:transform 0.2s}
+.btn:hover .arrow{transform:translateX(4px)}
+.hero-meta{border-left:1px solid var(--line-strong);padding-left:32px;padding-bottom:8px}
+.hero-meta-item{margin-bottom:28px}
+.hero-meta-item:last-child{margin-bottom:0}
+.hero-meta-label{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-weight:500}
+.hero-meta-value{font-family:'Fraunces',serif;font-size:24px;color:var(--cream);font-weight:400;letter-spacing:-0.01em}
+.hero-meta-value em{font-style:italic;color:var(--gold)}
+
+/* ---------- STATS BAR ---------- */
+.stats{background:var(--navy);color:var(--cream);padding:0;border-top:1px solid rgba(201,169,97,0.18)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);max-width:1320px;margin:0 auto;padding:0 32px}
+.stat{padding:36px 24px 36px 0;border-right:1px solid rgba(201,169,97,0.15)}
+.stat:last-child{border-right:0}
+.stat-num{font-family:'Fraunces',serif;font-size:42px;color:var(--gold);letter-spacing:-0.02em;line-height:1;margin-bottom:10px}
+.stat-label{font-size:13px;color:rgba(247,244,236,0.65);font-weight:300}
+
+/* ---------- POSITIONING ---------- */
+.positioning{background:var(--cream);padding:140px 0}
+.pos-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:100px;align-items:start}
+.pos-left .eyebrow{margin-bottom:24px;display:block}
+.pos-h{font-family:'Fraunces',serif;font-size:64px;line-height:1.02;letter-spacing:-0.02em;color:var(--ink);margin-bottom:24px;font-weight:400}
+.pos-h em{font-style:italic;color:var(--gold-dark)}
+.pos-tag{font-family:'Fraunces',serif;font-style:italic;color:var(--gold-dark);font-size:18px;margin-top:32px}
+.pos-right p{font-size:19px;line-height:1.6;color:var(--ink-2);margin-bottom:24px;font-weight:300}
+.pos-right p:last-child{margin-bottom:0}
+.pos-right p strong{font-weight:500;color:var(--ink)}
+.pos-quote{margin-top:48px;padding:32px;background:var(--cream-2);border-left:3px solid var(--gold);font-family:'Fraunces',serif;font-style:italic;font-size:21px;line-height:1.4;color:var(--ink)}
+
+/* ---------- WHAT WE FUND ---------- */
+.fund{background:var(--ink);color:var(--cream);padding:140px 0;position:relative}
+.fund::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold) 50%,transparent)}
+.fund-header{display:flex;justify-content:space-between;align-items:end;margin-bottom:80px;gap:60px;flex-wrap:wrap}
+.fund-header h2{font-family:'Fraunces',serif;font-size:72px;line-height:0.98;letter-spacing:-0.025em;color:var(--cream);max-width:700px;font-weight:400}
+.fund-header h2 em{font-style:italic;color:var(--gold)}
+.fund-header p{color:rgba(247,244,236,0.7);font-size:17px;max-width:380px;line-height:1.55;font-weight:300}
+.fund-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.fund-card{background:linear-gradient(180deg,rgba(26,52,120,0.4) 0%,rgba(15,30,61,0) 100%);border:1px solid rgba(201,169,97,0.25);padding:48px;position:relative;overflow:hidden;transition:all 0.3s}
+.fund-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.fund-card-num{font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:var(--gold);margin-bottom:24px;letter-spacing:0.05em}
+.fund-card-num::before{content:"";display:inline-block;width:24px;height:1px;background:var(--gold);vertical-align:middle;margin-right:12px}
+.fund-card h3{font-family:'Fraunces',serif;font-size:42px;color:var(--cream);line-height:1.05;letter-spacing:-0.02em;margin-bottom:20px;font-weight:400}
+.fund-card h3 em{font-style:italic;color:var(--gold)}
+.fund-card-desc{color:rgba(247,244,236,0.7);font-size:16px;line-height:1.55;margin-bottom:32px;font-weight:300}
+.fund-specs{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-top:28px;border-top:1px solid rgba(201,169,97,0.2)}
+.fund-spec-k{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:5px;font-weight:500}
+.fund-spec-v{font-family:'Fraunces',serif;font-size:18px;color:var(--cream);font-weight:400}
+.fund-asset-row{margin-top:24px;font-size:14px;color:rgba(247,244,236,0.65);font-weight:300}
+.fund-asset-row strong{color:var(--gold);font-weight:500;margin-right:8px}
+
+/* ---------- PROCESS ---------- */
+.process{background:var(--cream);padding:140px 0}
+.process-header{margin-bottom:90px}
+.process-header h2{font-family:'Fraunces',serif;font-size:72px;line-height:0.98;letter-spacing:-0.025em;color:var(--ink);max-width:800px;margin-top:24px;font-weight:400}
+.process-header h2 em{font-style:italic;color:var(--gold-dark)}
+.process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.process-steps::before{content:"";position:absolute;top:40px;left:5%;right:5%;height:1px;background:var(--gold);opacity:0.4}
+.proc-step{position:relative;padding-right:24px}
+.proc-step:last-child{padding-right:0}
+.proc-num{width:80px;height:80px;background:var(--cream);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-style:italic;font-size:32px;color:var(--gold-dark);position:relative;z-index:2;margin-bottom:28px}
+.proc-step h4{font-family:'Geist',sans-serif;font-size:18px;color:var(--ink);margin-bottom:12px;font-weight:500;letter-spacing:-0.01em}
+.proc-step p{font-size:14px;color:var(--gray);line-height:1.55;font-weight:300}
+.proc-timing{margin-top:12px;font-family:'Fraunces',serif;font-style:italic;font-size:13px;color:var(--gold-dark)}
+
+/* ---------- WHY US ---------- */
+.why{background:var(--cream-2);padding:140px 0;position:relative}
+.why-inner{display:grid;grid-template-columns:1fr 1.6fr;gap:100px;align-items:start}
+.why h2{font-family:'Fraunces',serif;font-size:64px;line-height:1.02;letter-spacing:-0.02em;color:var(--ink);margin-top:24px;font-weight:400}
+.why h2 em{font-style:italic;color:var(--gold-dark)}
+.why-stick{position:sticky;top:120px}
+.why-pillars{display:grid;gap:1px;background:rgba(201,169,97,0.25)}
+.pillar{background:var(--cream-2);padding:40px 0;display:grid;grid-template-columns:80px 1fr 60px;gap:32px;align-items:start}
+.pillar:first-child{padding-top:0}
+.pillar-num{font-family:'Fraunces',serif;font-style:italic;font-size:42px;color:var(--gold);line-height:1;font-weight:400}
+.pillar-body h4{font-family:'Fraunces',serif;font-size:28px;color:var(--ink);margin-bottom:12px;font-weight:500;line-height:1.15;letter-spacing:-0.01em}
+.pillar-body p{font-size:16px;color:var(--ink-2);line-height:1.55;font-weight:300}
+.pillar-icon{width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold-dark);font-family:'Fraunces',serif;font-style:italic;font-size:18px}
+
+/* ---------- ECOSYSTEM ---------- */
+.eco{background:var(--navy);color:var(--cream);padding:140px 0;position:relative;overflow:hidden}
+.eco::before{content:"";position:absolute;top:50%;left:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(201,169,97,0.12) 0%,transparent 70%);transform:translateY(-50%)}
+.eco-inner{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.eco h2{font-family:'Fraunces',serif;font-size:64px;line-height:1.02;letter-spacing:-0.02em;color:var(--cream);margin-top:24px;font-weight:400}
+.eco h2 em{font-style:italic;color:var(--gold)}
+.eco-lede{font-size:18px;color:rgba(247,244,236,0.75);line-height:1.6;margin-top:32px;font-weight:300}
+.eco-right{position:relative}
+.eco-family{display:grid;gap:16px}
+.fam-card{background:rgba(255,255,255,0.04);border:1px solid rgba(201,169,97,0.2);padding:28px 32px;display:flex;justify-content:space-between;align-items:center;transition:all 0.25s;cursor:pointer}
+.fam-card:hover{background:rgba(255,255,255,0.06);border-color:var(--gold)}
+.fam-card.current{background:rgba(201,169,97,0.08);border-color:var(--gold)}
+.fam-card-left{display:flex;flex-direction:column;gap:4px}
+.fam-name{font-family:'Fraunces',serif;font-size:22px;color:var(--cream);font-weight:400}
+.fam-name em{font-style:italic;color:var(--gold)}
+.fam-tag{font-size:13px;color:rgba(247,244,236,0.6);font-weight:300}
+.fam-arrow{font-family:'Fraunces',serif;color:var(--gold);font-size:20px}
+.fam-badge{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);font-weight:500;background:rgba(201,169,97,0.12);padding:6px 10px;border:1px solid rgba(201,169,97,0.3)}
+
+/* ---------- RESOURCES ---------- */
+.resources{background:var(--cream);padding:140px 0}
+.res-header{display:flex;justify-content:space-between;align-items:end;margin-bottom:60px;flex-wrap:wrap;gap:32px}
+.res-header h2{font-family:'Fraunces',serif;font-size:64px;line-height:1;letter-spacing:-0.02em;color:var(--ink);max-width:700px;margin-top:20px;font-weight:400}
+.res-header h2 em{font-style:italic;color:var(--gold-dark)}
+.res-link{display:inline-flex;align-items:center;gap:10px;color:var(--gold-dark);font-size:14px;font-weight:500;border-bottom:1px solid var(--gold);padding-bottom:4px;letter-spacing:0.02em}
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.res-card{background:var(--cream-2);padding:40px 36px;transition:all 0.25s;cursor:pointer;border:1px solid transparent;position:relative}
+.res-card:hover{background:var(--cream);border-color:var(--gold);transform:translateY(-2px)}
+.res-tag{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-dark);font-weight:500;margin-bottom:32px;display:inline-block;padding-bottom:6px;border-bottom:1px solid var(--gold)}
+.res-card h3{font-family:'Fraunces',serif;font-size:26px;line-height:1.15;color:var(--ink);margin-bottom:16px;font-weight:500;letter-spacing:-0.01em}
+.res-card p{font-size:15px;line-height:1.55;color:var(--gray);font-weight:300;margin-bottom:28px}
+.res-meta{font-size:12px;color:var(--gold-dark);font-family:'Fraunces',serif;font-style:italic;letter-spacing:0.02em}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--cream-2);padding:140px 0}
+.faq-inner{display:grid;grid-template-columns:1fr 1.6fr;gap:100px;align-items:start}
+.faq-left{position:sticky;top:120px}
+.faq h2{font-family:'Fraunces',serif;font-size:56px;line-height:1.02;letter-spacing:-0.02em;color:var(--ink);margin-top:24px;font-weight:400}
+.faq h2 em{font-style:italic;color:var(--gold-dark)}
+.faq-help{margin-top:32px;padding-top:32px;border-top:1px solid var(--line-strong)}
+.faq-help-label{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-dark);font-weight:500;margin-bottom:8px}
+.faq-help-num{font-family:'Fraunces',serif;font-size:24px;color:var(--ink);font-weight:400}
+.faq-list{display:flex;flex-direction:column;border-top:1px solid var(--line-strong)}
+.faq-item{border-bottom:1px solid var(--line-strong);padding:28px 0;cursor:pointer}
+.faq-q{display:flex;justify-content:space-between;align-items:start;gap:32px;font-family:'Fraunces',serif;font-size:22px;color:var(--ink);font-weight:400;line-height:1.3}
+.faq-toggle{font-family:'Fraunces',serif;font-size:20px;color:var(--gold-dark);transition:transform 0.2s;flex-shrink:0;line-height:1}
+.faq-a{font-size:16px;line-height:1.6;color:var(--ink-2);margin-top:16px;max-width:90%;font-weight:300}
+.faq-item.collapsed .faq-a{display:none}
+.faq-item.collapsed .faq-toggle{transform:rotate(0deg)}
+.faq-item:not(.collapsed) .faq-toggle{transform:rotate(45deg)}
+
+/* ---------- CTA ---------- */
+.cta{background:var(--navy);color:var(--cream);padding:160px 0;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse at 20% 50%, rgba(201,169,97,0.18) 0%, transparent 50%);pointer-events:none}
+.cta-inner{position:relative;text-align:center;max-width:900px;margin:0 auto;padding:0 32px}
+.cta h2{font-family:'Fraunces',serif;font-size:clamp(56px,7vw,96px);line-height:0.98;letter-spacing:-0.025em;color:var(--cream);margin-bottom:32px;font-weight:400}
+.cta h2 em{font-style:italic;color:var(--gold)}
+.cta p{font-size:19px;color:rgba(247,244,236,0.75);max-width:600px;margin:0 auto 48px;line-height:1.55;font-weight:300}
+.cta-row{display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap}
+.cta-foot{margin-top:64px;padding-top:32px;border-top:1px solid rgba(201,169,97,0.25);display:flex;justify-content:center;gap:48px;flex-wrap:wrap;font-size:13px;color:rgba(247,244,236,0.6);font-weight:300}
+.cta-foot strong{color:var(--gold);font-weight:500;margin-right:8px}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--ink);color:rgba(247,244,236,0.7);padding:80px 0 40px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+.foot-brand .logo{margin-bottom:20px}
+.foot-brand p{color:rgba(247,244,236,0.55);font-size:14px;line-height:1.55;max-width:300px;font-weight:300}
+.foot-col h5{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:500}
+.foot-col a{display:block;color:rgba(247,244,236,0.65);font-size:14px;margin-bottom:10px;font-weight:300}
+.foot-col a:hover{color:var(--gold)}
+.foot-bottom{border-top:1px solid rgba(201,169,97,0.15);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;color:rgba(247,244,236,0.4);font-size:12px;font-weight:300}
+.foot-bottom em{font-style:italic;color:var(--gold)}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 980px){
+  .hero-inner,.pos-inner,.why-inner,.eco-inner,.faq-inner{grid-template-columns:1fr;gap:48px}
+  .hero h1{font-size:64px}
+  .pos-h,.fund-header h2,.process-header h2,.why h2,.eco h2,.res-header h2,.faq h2{font-size:44px}
+  .fund-cards,.res-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .process-steps::before{display:none}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:40px}
+  section{padding:80px 0}
+  .wrap{padding:0 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">BF</span>
+      Bigger Funding
+      <small>a bigger profits company</small>
+    </a>
+    <div class="nav-links">
+      <a href="#fund">What We Fund</a>
+      <a href="#process">Process</a>
+      <a href="#why">Why Us</a>
+      <a href="#resources">Resources</a>
+      <a href="#about">About</a>
+    </div>
+    <a href="#cta" class="nav-cta">Submit a Deal →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">
+          <span class="eyebrow eyebrow-light">Bigger Funding</span>
+          <span class="eyebrow eyebrow-light" style="opacity:0.6">Capital for Commercial Operators</span>
+        </div>
+        <h1 class="display">
+          Capital, placed<br>by operators who<br><em>actually own real estate.</em>
+        </h1>
+        <p class="hero-lede">
+          Bridge and ground-up construction debt from $2M to $10M for serious commercial operators. We know your deal because we've done your deal. Underwriting reads the same on both sides of the table.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#cta" class="btn btn-gold">Submit a Deal <span class="arrow">→</span></a>
+          <a href="#fund" class="btn btn-ghost">What we fund</a>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="hero-meta-label">Loan Size</div>
+          <div class="hero-meta-value">$2M<em> to </em>$10M</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-label">Products</div>
+          <div class="hero-meta-value">Bridge <em>&amp;</em> Construction</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-label">Indicative Terms</div>
+          <div class="hero-meta-value"><em>~</em>48 hours</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-label">Lender Network</div>
+          <div class="hero-meta-value">40<em>+ </em>sources</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats">
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="stat-num">$2–10M</div>
+      <div class="stat-label">Mid-market loan size, where we live</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">12–24mo</div>
+      <div class="stat-label">Bridge and construction term ranges</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Asset types: multifamily, industrial, self-storage, retail, mixed-use</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">40+</div>
+      <div class="stat-label">Capital relationships across bridge, construction, and bank lenders</div>
+    </div>
+  </div>
+</div>
+
+<!-- POSITIONING -->
+<section class="positioning" id="about">
+  <div class="wrap">
+    <div class="pos-inner">
+      <div class="pos-left">
+        <span class="eyebrow">— 01 / Who We Are</span>
+        <h1 class="display pos-h">Built for the operator,<br><em>not the broker.</em></h1>
+        <div class="pos-tag">Operator-led capital from the Bigger Profits ecosystem.</div>
+      </div>
+      <div class="pos-right">
+        <p>
+          Most commercial loans get pushed through a desk where nobody has ever signed a personal guarantee, walked a job site, or sat across from a sponsor whose draw is late. That distance shows up in the term sheet, and you pay for it.
+        </p>
+        <p>
+          Bigger Funding is different by design. We own commercial real estate. We've taken the same loans we now place. When a deal hits our intake, we read it the way the borrower would read it, then we package it for the lender book the way a lender wants to see it.
+        </p>
+        <p>
+          <strong>The result is a faster screen, a tighter package, and a better answer.</strong> Sometimes that answer is "this is a great deal, here's where it should go." Sometimes it's "this won't price the way you think, here's why." Either way, you get an operator's read instead of a brokerage pitch.
+        </p>
+        <div class="pos-quote">
+          We're the financing partner we wished we'd had on our first construction deal. So we built it.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE FUND -->
+<section class="fund" id="fund">
+  <div class="wrap">
+    <div class="fund-header">
+      <div>
+        <span class="eyebrow eyebrow-light">— 02 / What We Fund</span>
+        <h2 style="margin-top:24px">Two products,<br>built for <em>commercial</em><br>operators.</h2>
+      </div>
+      <p>We lead with what we know. Bridge debt for acquisitions and value-add, and ground-up construction debt for multifamily, industrial, self-storage, and mixed-use. Adjacent placements available through our lender network.</p>
+    </div>
+    <div class="fund-cards">
+      <!-- Bridge -->
+      <div class="fund-card">
+        <div class="fund-card-num">Product 01</div>
+        <h3>Bridge<br>&amp; Value-Add <em>Debt</em></h3>
+        <p class="fund-card-desc">
+          Short-term capital for acquisition, reposition, and the gap between today's basis and tomorrow's stabilized loan. Interest-only so cash flow is preserved during the work.
+        </p>
+        <div class="fund-specs">
+          <div>
+            <div class="fund-spec-k">Loan Size</div>
+            <div class="fund-spec-v">$2M – $10M</div>
+          </div>
+          <div>
+            <div class="fund-spec-k">Term</div>
+            <div class="fund-spec-v">12 – 24 months</div>
+          </div>
+          <div>
+            <div class="fund-spec-k">LTV / LTC</div>
+            <div class="fund-spec-v">~65–75% / ≤80%</div>
+          </div>
+          <div>
+            <div class="fund-spec-k">Structure</div>
+            <div class="fund-spec-v">Interest-only</div>
+          </div>
+        </div>
+        <div class="fund-asset-row"><strong>Use cases</strong> Acquisition, reposition, lease-up bridge, refi-to-stabilization</div>
+      </div>
+      <!-- Construction -->
+      <div class="fund-card">
+        <div class="fund-card-num">Product 02</div>
+        <h3>Ground-Up<br>Construction <em>Debt</em></h3>
+        <p class="fund-card-desc">
+          Draw-based financing for new construction across the asset classes we operate in. Sized to your hard and soft costs, structured around your build schedule, not a generic template.
+        </p>
+        <div class="fund-specs">
+          <div>
+            <div class="fund-spec-k">Loan Size</div>
+            <div class="fund-spec-v">$2M – $10M</div>
+          </div>
+          <div>
+            <div class="fund-spec-k">Term</div>
+            <div class="fund-spec-v">12 – 24mo + ext.</div>
+          </div>
+          <div>
+            <div class="fund-spec-k">LTC</div>
+            <div class="fund-spec-v">~65–75%</div>
+          </div>
+          <div>
+            <div class="fund-spec-k">Structure</div>
+            <div class="fund-spec-v">Draw-based</div>
+          </div>
+        </div>
+        <div class="fund-asset-row"><strong>Use cases</strong> Multifamily, industrial/flex, self-storage, mixed-use, retail</div>
+      </div>
+    </div>
+    <p style="margin-top:48px;color:rgba(247,244,236,0.55);font-size:14px;font-weight:300;max-width:700px">
+      <span style="color:var(--gold)">Adjacent placements</span> — bridge-to-perm, DSCR, permanent debt, mezzanine and preferred-equity referrals, recapitalizations. If your deal needs it and a credible lender in our book can do it, we'll get you there.
+    </p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="process-header">
+      <span class="eyebrow">— 03 / The Process</span>
+      <h2>Five steps from intake to wire. <em>No surprises.</em></h2>
+    </div>
+    <div class="process-steps">
+      <div class="proc-step">
+        <div class="proc-num">I</div>
+        <h4>Submit your deal</h4>
+        <p>A quick intake form captures the basics: asset, basis, business plan, sponsor.</p>
+        <div class="proc-timing">~ 10 minutes</div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">II</div>
+        <h4>Indicative terms</h4>
+        <p>We screen, run the numbers as an owner would, and come back with a range you can act on.</p>
+        <div class="proc-timing">Within 48 hours</div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">III</div>
+        <h4>Underwrite &amp; package</h4>
+        <p>Full model, narrative, and a lender-ready submission built from the way lenders want to read it.</p>
+        <div class="proc-timing">7–14 days</div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">IV</div>
+        <h4>Placement</h4>
+        <p>Routed to the right capital sources from our lender book, then a term sheet for you to compare.</p>
+        <div class="proc-timing">2–4 weeks</div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">V</div>
+        <h4>Close &amp; fund</h4>
+        <p>We coordinate appraisal, title, environmental, and feasibility through to the wire.</p>
+        <div class="proc-timing">30–60 days</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="why-inner">
+      <div class="why-stick">
+        <span class="eyebrow">— 04 / Why Operators Choose Us</span>
+        <h2>A few things you can't<br>get from <em>a generic broker.</em></h2>
+      </div>
+      <div class="why-pillars">
+        <div class="pillar">
+          <div class="pillar-num">i.</div>
+          <div class="pillar-body">
+            <h4>We read your deal as an owner</h4>
+            <p>Our underwriting starts from the operator's view. We know what a leasing assumption is hiding, where a GC's contingency really lives, and which line item the lender is going to push back on before they push back.</p>
+          </div>
+          <div class="pillar-icon">★</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">ii.</div>
+          <div class="pillar-body">
+            <h4>A real lender book, not a Rolodex</h4>
+            <p>Forty-plus active relationships across bridge funds, construction lenders, banks, credit unions, life companies, and DSCR shops. Each one mapped to its credit box so your file goes to the desk most likely to say yes.</p>
+          </div>
+          <div class="pillar-icon">★</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">iii.</div>
+          <div class="pillar-body">
+            <h4>Speed and certainty, not theater</h4>
+            <p>Indicative terms in days, not weeks. We pre-screen aggressively so a deal we take on is a deal we expect to close. If we don't think a file will get done, we say so on day one.</p>
+          </div>
+          <div class="pillar-icon">★</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">iv.</div>
+          <div class="pillar-body">
+            <h4>Inside the Bigger Profits world</h4>
+            <p>We're the financing arm of an ecosystem you already know — the podcast, the community, the curriculum. The standards you've come to expect from Bigger Profits show up in every term sheet.</p>
+          </div>
+          <div class="pillar-icon">★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section class="eco">
+  <div class="wrap">
+    <div class="eco-inner">
+      <div>
+        <span class="eyebrow eyebrow-light">— 05 / The Bigger Family</span>
+        <h2>One ecosystem.<br>Built around <em>operators.</em></h2>
+        <p class="eco-lede">
+          Bigger Funding is the capital arm of a much larger machine. Bigger Profits teaches operators to find and structure commercial deals. The Skool community puts them in the same room. And now Bigger Funding funds them.
+        </p>
+        <p class="eco-lede">
+          Same standards. Same people. Same brand. The financing piece operators always needed, finally inside the house.
+        </p>
+      </div>
+      <div class="eco-right">
+        <div class="eco-family">
+          <div class="fam-card">
+            <div class="fam-card-left">
+              <div class="fam-name">Bigger <em>Profits</em></div>
+              <div class="fam-tag">The education, podcast, community, and training programs for commercial operators</div>
+            </div>
+            <div class="fam-arrow">→</div>
+          </div>
+          <div class="fam-card current">
+            <div class="fam-card-left">
+              <div class="fam-name">Bigger <em>Funding</em></div>
+              <div class="fam-tag">The capital arm — bridge and construction debt</div>
+            </div>
+            <div class="fam-badge">You are here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="resources" id="resources">
+  <div class="wrap">
+    <div class="res-header">
+      <div>
+        <span class="eyebrow">— 06 / Learn Before You Borrow</span>
+        <h2>The Capital <em>Desk.</em></h2>
+      </div>
+      <a href="#" class="res-link">All resources →</a>
+    </div>
+    <div class="res-grid">
+      <div class="res-card">
+        <div class="res-tag">Field Guide</div>
+        <h3>How to read a bridge loan term sheet without losing your shirt</h3>
+        <p>Origination points, exit fees, springing recourse, the cash-management trigger you didn't see on page nine. A walk-through using a real (anonymized) term sheet from this year.</p>
+        <div class="res-meta">12 min read · 2026</div>
+      </div>
+      <div class="res-card">
+        <div class="res-tag">Deal Memo</div>
+        <h3>Bridge vs. construction: which one your deal actually needs</h3>
+        <p>The single biggest mistake we see at intake is sponsors asking for the wrong product. A simple framework, plus three deal scenarios where the obvious answer turned out wrong.</p>
+        <div class="res-meta">9 min read · 2026</div>
+      </div>
+      <div class="res-card">
+        <div class="res-tag">Tactical</div>
+        <h3>The five line items lenders push back on (and how to defend them)</h3>
+        <p>Repairs and replacement reserves, lease-up timing, exit cap rate, GC contingency, T&amp;I assumptions. If you can pre-empt the pushback, you keep the leverage.</p>
+        <div class="res-meta">7 min read · 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="faq-inner">
+      <div class="faq-left">
+        <span class="eyebrow">— 07 / Frequently Asked</span>
+        <h2>Answers, before<br>you <em>have to ask.</em></h2>
+        <div class="faq-help">
+          <div class="faq-help-label">Still have questions?</div>
+          <div class="faq-help-num">deals@biggerfunding.com</div>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">What kinds of deals do you actually close?
+            <span class="faq-toggle">+</span></div>
+          <div class="faq-a">Bridge and ground-up construction in the $2M to $10M range, across multifamily, self-storage, industrial and flex, retail, and mixed-use. If your deal is outside that box but credible, we'll tell you fast and often point you at someone in the network who handles it.</div>
+        </div>
+        <div class="faq-item collapsed">
+          <div class="faq-q">Are you a broker or a direct lender?
+            <span class="faq-toggle">+</span></div>
+          <div class="faq-a">Right now, a commercial mortgage brokerage. We underwrite and package the deal in-house, then place it with the right capital source from our lender book. A direct lending fund is on the roadmap as we build the track record to support it. We say which hat we're wearing on every deal, every time.</div>
+        </div>
+        <div class="faq-item collapsed">
+          <div class="faq-q">How fast can I get indicative terms?
+            <span class="faq-toggle">+</span></div>
+          <div class="faq-a">Usually 48 hours from a complete intake. "Complete" means the basics: asset, basis, business plan, sponsor, and a rough sources-and-uses. If something's missing, we'll come back with one question instead of a list.</div>
+        </div>
+        <div class="faq-item collapsed">
+          <div class="faq-q">Do I need to be in the Bigger Profits community?
+            <span class="faq-toggle">+</span></div>
+          <div class="faq-a">No. We work with operators across the broader CRE world. The Bigger Profits community is where we started, and a lot of our deal flow comes through it, but the door is open to any serious sponsor with a real deal.</div>
+        </div>
+        <div class="faq-item collapsed">
+          <div class="faq-q">What states do you operate in?
+            <span class="faq-toggle">+</span></div>
+          <div class="faq-a">We're based in Arizona and licensed accordingly. Commercial lending has different rules from residential, so the geography we can place in is wider than the geography we're licensed in. Tell us where the property is and we'll confirm before you spend any time on the file.</div>
+        </div>
+        <div class="faq-item collapsed">
+          <div class="faq-q">What does this cost?
+            <span class="faq-toggle">+</span></div>
+          <div class="faq-a">Standard brokerage origination, typically 1% to 1.5% of loan amount, payable at close. We disclose the fee structure on the engagement letter before you sign anything. Nothing buried.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+  <div class="cta-inner">
+    <span class="eyebrow eyebrow-light">— Submit a deal</span>
+    <h2 style="margin-top:24px">Send us the deal.<br>We'll send back a <em>real answer.</em></h2>
+    <p>The intake takes about ten minutes. You'll hear back from a human, usually within 48 hours, with an honest read on whether it gets done and what it will probably cost.</p>
+    <div class="cta-row">
+      <a href="#" class="btn btn-gold">Submit a Deal <span class="arrow">→</span></a>
+      <a href="#" class="btn btn-ghost">Book a 15-min call</a>
+    </div>
+    <div class="cta-foot">
+      <div><strong>Email</strong> deals@biggerfunding.com</div>
+      <div><strong>Phone</strong> (480) 555-0100</div>
+      <div><strong>Office</strong> Phoenix, Arizona</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo">
+          <span class="logo-mark">BF</span>
+          Bigger Funding
+        </a>
+        <p>Capital for commercial operators. A Bigger Profits company. Built by operators who actually own real estate.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Products</h5>
+        <a href="#">Bridge Loans</a>
+        <a href="#">Construction Loans</a>
+        <a href="#">DSCR &amp; Permanent</a>
+        <a href="#">Mezzanine / Pref Equity</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="#">Our Process</a>
+        <a href="#">The Capital Desk</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h5>The Bigger Family</h5>
+        <a href="#">Bigger Profits</a>
+        <a href="#">Skool Community</a>
+        <a href="#">Bigger Profits Podcast</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Bigger Funding, LLC. All rights reserved. <em>A Bigger Profits company.</em></div>
+      <div>Arizona Commercial Mortgage Broker · NMLS #pending · Equal Opportunity</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// FAQ toggle
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('collapsed');
+  });
+});
+</script>
+
+</body>
+</html>
